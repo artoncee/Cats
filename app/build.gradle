@@ -56,7 +56,7 @@ dependencies {
     implementation "com.github.moxy-community:moxy-androidx:2.2.2"
     implementation "com.github.moxy-community:moxy-ktx:2.2.2"
     implementation "com.github.moxy-community:moxy-material:2.2.2"
-    annotationProcessor 'com.arello-mobile:moxy-compiler:1.5.5'
+    kapt "com.github.moxy-community:moxy-compiler:2.2.2"
     //Koin
     //https://github.com/InsertKoinIO/koin
     implementation "io.insert-koin:koin-core:3.2.0"

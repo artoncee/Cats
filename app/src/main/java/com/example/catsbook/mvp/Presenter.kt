@@ -1,7 +1,7 @@
 package com.example.catsbook.mvp
 
-import com.example.catsbook.act.DetailPresenter
-import com.example.catsbook.act.MainPresenter
+import com.example.catsbook.ui.details.DetailPresenter
+import com.example.catsbook.ui.main.MainPresenter
 import org.koin.dsl.module
 
 

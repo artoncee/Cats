@@ -1,4 +1,4 @@
-package com.example.catsbook.act
+package com.example.catsbook.ui.main
 
 import com.example.catsbook.utils.Utils
 import com.example.catsbook.data.Cat

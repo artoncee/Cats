@@ -9,26 +9,42 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Порода:"
+        android:inputType="text"
         android:minHeight="48dp"
         android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        android:inputType="text"/>
+        app:layout_constraintVertical_bias="0.278" />
 
     <EditText
         android:id="@+id/wool1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Длина шерсти:"
+        android:inputType="text"
         android:minHeight="48dp"
         android:textSize="16sp"
         app:layout_constraintBottom_toTopOf="@+id/breed1"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="@id/breed1"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.83"
+        app:layout_constraintVertical_bias="0.51" />
+
+    <EditText
+        android:id="@+id/detail1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Описание:"
+        android:minHeight="48dp"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/breed1"
+        app:layout_constraintVertical_bias="0.14"
         android:inputType="text"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

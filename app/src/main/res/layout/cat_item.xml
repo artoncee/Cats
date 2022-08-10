@@ -25,21 +25,16 @@
             android:padding="16dp">
 
 
-<!--            <ImageView-->
-<!--                android:id="@+id/imageView"-->
-<!--                android:layout_width="100dp"-->
-<!--                android:layout_height="100dp"-->
-<!--                android:layout_marginLeft="10dp"-->
-<!--                app:layout_constraintBaseline_toTopOf="parent"-->
-<!--                app:layout_constraintLeft_toLeftOf="parent"-->
-<!--                app:srcCompat="@drawable/cat1" />-->
-            <TextView
-                            android:id="@+id/imageView"
-                            android:layout_width="100dp"
-                            android:layout_height="100dp"
-                            android:layout_marginLeft="10dp"
-                            app:layout_constraintBaseline_toTopOf="parent"
-                            app:layout_constraintLeft_toLeftOf="parent"/>
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginLeft="10dp"
+                app:layout_constraintBaseline_toTopOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:srcCompat="@drawable/cat1"
+                />
+
 
             <TextView
                 android:id="@+id/textView"
@@ -69,7 +64,7 @@
                 tools:ignore="MissingConstraints" />
 
             <ImageView
-                android:id="@+id/imageView2"
+                android:id="@+id/mMenus"
                 android:layout_width="29dp"
                 android:layout_height="26dp"
                 android:layout_marginStart="320dp"
@@ -78,10 +73,10 @@
                 android:foregroundGravity="center"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.41"
+                app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/textView1"
-                app:layout_constraintVertical_bias="0.6"
+                app:layout_constraintVertical_bias="0.25"
                 app:srcCompat="@drawable/ic_options" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>

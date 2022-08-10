@@ -1,10 +1,10 @@
-package com.example.catsbook
+package com.example.catsbook.ui.details
 
 import android.content.Context
 import android.content.Intent
 import android.os.Bundle
-import com.example.catsbook.act.DetailPresenter
-import com.example.catsbook.act.IDetailActivity
+import android.util.Log
+import com.example.catsbook.R
 import com.example.catsbook.utils.Constants
 import com.example.catsbook.databinding.ActivityDetailBinding
 import com.example.catsbook.data.Cat
@@ -28,14 +28,16 @@ class DetailActivity : MvpAppCompatActivity(), IDetailActivity {
         setContentView(R.layout.activity_detail)
 
         presenter.cat = intent.getParcelableExtra(Constants.Extras.CAT) ?: throw IllegalArgumentException("")
-
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
         supportActionBar?.setDisplayShowHomeEnabled(true)
     }
 
     override fun setOfCat(cat: Cat) {
+        Log.d("DetailActivity", "${cat.details}")
+        if (cat != null)
         binding.textDetail.text= cat.details
-//        binding.imageDetail.setImageResource(cat.imageId)
+
+
     }
 
     override fun onSupportNavigateUp(): Boolean {
