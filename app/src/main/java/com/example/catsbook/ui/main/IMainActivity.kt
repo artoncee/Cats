@@ -6,9 +6,13 @@ import moxy.viewstate.strategy.alias.OneExecution
 
 interface IMainActivity: MvpView {
 
-    fun showCatList(catlist: List<Cat>)
+    fun showCatList(catList: List<Cat>)
 
     @OneExecution
     fun openDetails(cat: Cat)
+
+    @OneExecution
+    fun addingCat()
+
 
 }

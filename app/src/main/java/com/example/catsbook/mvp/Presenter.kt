@@ -7,5 +7,5 @@ import org.koin.dsl.module
 
 val presenterModule = module {
     factory { MainPresenter(get()) }
-    factory { DetailPresenter() }
+    factory { DetailPresenter(get()) }
 }

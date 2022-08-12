@@ -4,6 +4,8 @@ import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import android.util.Log
+import android.view.Menu
+import android.view.MenuItem
 import com.example.catsbook.R
 import com.example.catsbook.utils.Constants
 import com.example.catsbook.databinding.ActivityDetailBinding
@@ -25,39 +27,33 @@ class DetailActivity : MvpAppCompatActivity(), IDetailActivity {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityDetailBinding.inflate(layoutInflater)
-        setContentView(R.layout.activity_detail)
-
+        setContentView(binding.root)
         presenter.cat = intent.getParcelableExtra(Constants.Extras.CAT) ?: throw IllegalArgumentException("")
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
         supportActionBar?.setDisplayShowHomeEnabled(true)
     }
 
     override fun setOfCat(cat: Cat) {
-        Log.d("DetailActivity", "${cat.details}")
-        if (cat != null)
         binding.textDetail.text= cat.details
-
-
     }
 
     override fun onSupportNavigateUp(): Boolean {
         finish()
         return true
     }
-//    override fun onCreate(savedInstanceState: Bundle?) {
-//        super.onCreate(savedInstanceState)
-//        setContentView(R.layout.activity_detail)
-//
-//        val cat= intent.getParcelableExtra<Cat>(MainActivity.parce)
-//
-//        val img = findViewById<ImageView>(R.id.imageDetail)
-//        val txt= findViewById<TextView>(R.id.textDetail)
-//
-//        if (cat != null) {
-//            img.setImageResource(cat.imageId)
-//        }
-//        if (cat != null) {
-//            txt.text= cat.details
-//        }
-//    }
+    override fun onCreateOptionsMenu(menu: Menu): Boolean {
+        menuInflater.inflate(R.menu.details_menu, menu)
+        return true
+    }
+    override fun onOptionsItemSelected(item: MenuItem) =
+        when (item.itemId) {
+            R.id.del -> {
+                presenter.processDeleteClick()
+                true
+            }
+            else -> super.onOptionsItemSelected(item)
+        }
+    override fun close() {
+        finish()
+    }
 }

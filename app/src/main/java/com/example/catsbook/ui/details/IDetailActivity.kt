@@ -6,5 +6,6 @@ import moxy.MvpView
 interface IDetailActivity: MvpView {
 
     fun setOfCat(cat: Cat)
+    fun close()
 
 }

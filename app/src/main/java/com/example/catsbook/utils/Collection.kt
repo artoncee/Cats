@@ -11,6 +11,3 @@ fun <T> MutableList<T>.replaceWith(items: List<T>) {
     clear()
     addAll(items)
 }
-//fun <T> MutableList<T>.add(items: List<T>){
-//
-//}
